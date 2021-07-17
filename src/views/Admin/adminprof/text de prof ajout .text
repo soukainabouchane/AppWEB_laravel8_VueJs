@@ -1,0 +1,83 @@
+ methods: {
+    async addprof () {
+      try {
+        await axios.post('http://127.0.0.1:8000/api/list_profs/', {
+          nom: this.nom,
+          prenom: this.prenom,
+          cin: this.cin,
+          sexe: this.sexe,
+          civilite: this.civilite,
+          situation_familiale: this.situation_familiale,
+          mail: this.mail,
+          date_naissance: this.date_naissance,
+          pays: this.pays,
+          ville: this.ville,
+          nationalite: this.nationalite,
+          code_postal: this.code_postal,
+          tel_fixe: this.tel_fixe,
+          tel_portable: this.tel_portable,
+          mot_de_passe: this.mot_de_passe,
+          id_admin: this.id_admin,
+          id_emp_temps: this.id_emp_temps,
+          created_at: this.created_at,
+          updated_at: this.updated_at
+        })
+      } catch (e) {
+        console.error(e)
+      }
+    },
+    async updateAdmin () {
+      try {
+        await axios.patch('http://127.0.0.1:8000/api/update_admin/' + this.Admin.id, {
+          nom: this.nom,
+          prenom: this.prenom,
+          cin: this.cin,
+          sexe: this.sexe,
+          civilite: this.civilite,
+          situation_familiale: this.situation_familiale,
+          mail: this.mail,
+          date_naissance: this.date_naissance,
+          pays: this.pays,
+          ville: this.ville,
+          nationalite: this.nationalite,
+          code_postal: this.code_postal,
+          tel_fixe: this.tel_fixe,
+          tel_portable: this.tel_portable,
+          mot_de_passe: this.mot_de_passe,
+          id_admin: this.id_admin,
+          id_emp_temps: this.id_emp_temps,
+          created_at: this.created_at,
+          updated_at: this.updated_at
+        })
+      } catch (e) {
+        console.error(e)
+      }
+    },
+    async updatEetu () {
+      try {
+        await axios.patch('http://127.0.0.1:8000/api/update_etudiant/' + this.id, {
+          nom: this.nom,
+          prenom: this.prenom,
+          cin: this.cin,
+          sexe: this.sexe,
+          civilite: this.civilite,
+          situation_familiale: this.situation_familiale,
+          mail: this.mail,
+          date_naissance: this.date_naissance,
+          pays: this.pays,
+          ville: this.ville,
+          nationalite: this.nationalite,
+          code_postal: this.code_postal,
+          tel_fixe: this.tel_fixe,
+          tel_portable: this.tel_portable,
+          mot_de_passe: this.mot_de_passe,
+          id_admin: this.id_admin,
+          id_emp_temps: this.id_emp_temps,
+          created_at: this.created_at,
+          updated_at: this.updated_at
+        })
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  }
